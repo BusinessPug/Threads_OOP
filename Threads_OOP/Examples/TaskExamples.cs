@@ -163,4 +163,19 @@ internal static class TaskExamples
         Thread.Sleep(1000);
         return Enumerable.Range(start, end - start + 1).Sum();
     }
+
+    public static async Task TaskExplanation()
+    {
+        Console.WriteLine("\n=== Task Explanation ===");
+        Console.WriteLine("A Task represents an asynchronous operation that can be awaited.");
+        Console.WriteLine("Tasks can return a value (Task<T>) or be void (Task).");
+        Console.WriteLine("Tasks can be created using Task.Run, Task.Factory.StartNew, or async methods.");
+        Console.WriteLine("Tasks can be cancelled using CancellationToken.");
+        Console.WriteLine("Tasks can be chained using ContinueWith or async/await.");
+        Console.WriteLine("\nTasks aren't simply firing up threads, using them, and then disposing them.\n" +
+            "The runtime manages a pool of threads and schedules tasks efficiently.\n" +
+            "If the runtime knows it will have a thread ready from another task, to use on a future one, it can reuse it.\n" +
+            "This helps reduce the overhead of creating and destroying threads frequently.\n" +
+            "From the performance section in this project, this is very clearly shown to have a significant impact on efficiency (for larger tasks, where a managed threadpool is utilized).");
+    }
 }

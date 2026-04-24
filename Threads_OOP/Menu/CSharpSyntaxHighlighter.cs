@@ -7,6 +7,7 @@ namespace Threads_OOP.Menu;
 /// It handles: line/block comments, strings (including verbatim and interpolated),
 /// char literals, numeric literals, keywords, and a small set of known BCL type names.
 /// Good enough for displaying short demo snippets — not a full parser.
+/// This was stolen from GitHub.
 /// </summary>
 internal static class CSharpSyntaxHighlighter
 {
